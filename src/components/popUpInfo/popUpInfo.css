@@ -3,12 +3,19 @@
   flex-direction: column;
   border: black solid 1px;
   position: absolute;
-  background-color: wheat;
-  bottom: 0px;
+  color: white;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  bottom: 50px;
+  right: 0;
   width: 400px;
-  height: 500px; 
+  height: 400px;
+  position: fixed;
 }
 
-.info__desck{
-  margin-bottom: 250px;
+.info__text {
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  margin-bottom: 50px;
 }

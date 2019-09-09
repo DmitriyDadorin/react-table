@@ -8,7 +8,9 @@ import './header.css';
 
 class Header extends PureComponent {
 
-  state = { search: [] }
+  state = {
+    search: [],
+  }
 
   updateInputValue = (evt) => {
     this.props.getSearch(evt.target.value);
@@ -18,6 +20,7 @@ class Header extends PureComponent {
 
   render() {
     const { search } = this.state;
+    const { closes } = this.props;
     return (
       <div className="header" >
         <div className="header__button">
@@ -36,8 +39,8 @@ class Header extends PureComponent {
             text='Найти'
             onClick={() => this.props.onClick(search)}
           />
-          {this.props.info && <PopUpInfo info={this.props.info} />}
         </div>
+        {this.props.info && closes && <PopUpInfo onClick={this.props.clickForm} info={this.props.info} />}
       </div>
     )
   }

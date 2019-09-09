@@ -9,6 +9,7 @@ export default class Table extends PureComponent {
     persons: [],
     compare: false,
     result: null,
+    close: true,
   }
 
   componentDidMount() {
@@ -72,8 +73,14 @@ export default class Table extends PureComponent {
       if (+id === i) {
         return item;
       }
+      return null;
     })
-    this.setState({ result });
+    this.setState({ result: result, close: true });
+  }
+
+  onClose = () => {
+    const { close } = this.state;
+    this.setState({ close: !close })
   }
 
   render() {
@@ -81,7 +88,10 @@ export default class Table extends PureComponent {
       <Fragment>
         <Header
           onClick={this.search}
-          info={this.state.result} />
+          info={this.state.result}
+          closes={this.state.close}
+          clickForm={this.onClose}
+        />
         <table className="table">
           <thead onClick={this.getSortTable}>
             <tr>
