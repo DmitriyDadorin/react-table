@@ -1,0 +1,14 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  border: black solid 1px;
+  position: absolute;
+  background-color: wheat;
+  bottom: 0px;
+  width: 400px;
+  height: 500px; 
+}
+
+.info__desck{
+  margin-bottom: 250px;
+}

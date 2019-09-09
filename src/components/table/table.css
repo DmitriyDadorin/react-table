@@ -1,0 +1,26 @@
+.table {
+width: 100%;
+}
+
+.table__th{
+  cursor: pointer;
+  background: #BCEBDD;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  }
+
+.arrow-top {
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-top-color: orangered;
+  border-bottom: 0;
+  }
+ 
+.arrow-bottom {
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-bottom-color: orangered;
+  border-top: 0;
+}
